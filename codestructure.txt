@@ -1,0 +1,78 @@
+Below is the general code structure to be followed with code snippets(examples):
+
+
+
+############variable declarations as below ###################
+
+var ground, groundImg;
+
+
+
+############ to load the images, animations , sounds as below###########
+
+function preload()
+
+{
+
+​	groundImg= loadImage("ground2.png");
+
+}
+
+##########to create sprites and add Images#######################
+
+function setup()
+
+{
+
+	ground = createSprite(200,195,400,20);
+	
+	ground.addImage("ground",groundImg);
+
+}
+
+#############to add repeated steps and functionality to game ###############3
+
+function draw()
+
+{
+
+​	background("white");
+
+​	if(gameState==="play")
+
+​	{
+
+​		// activities of the game in state play
+
+​		drawSprites();
+
+​	} 
+
+​	if(gameState==="end")
+
+​	{
+
+        spawnObjects();
+​		//activities of the game in state play
+
+​	}
+
+}
+
+
+
+##############user defined functions ###################
+
+function spawnObjects()
+
+{
+
+​			if(frameCount%100===0)
+
+​			{
+
+​					// logic to add 
+
+​			}
+
+}
